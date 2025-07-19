@@ -1,0 +1,5 @@
+@import "./Card.css";
+
+.status {
+    font-weight: bold;
+}

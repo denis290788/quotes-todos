@@ -1,0 +1,5 @@
+@import "./Card.css";
+
+.quote {
+    font-style: italic;
+}
