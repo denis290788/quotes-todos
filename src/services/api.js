@@ -1,4 +1,4 @@
-const LIMIT = 5;
+const LIMIT = 18;
 
 export const fetchCards = async (source, page) => {
     const skip = (page - 1) * LIMIT;

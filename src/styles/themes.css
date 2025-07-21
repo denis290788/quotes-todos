@@ -1,14 +1,19 @@
 :root[main-theme="light"] {
     --bg: #ffffff;
     --text: #000000;
+    --accent-color: #b4c7e2;
+    --secondary-color: #d5b4e2;
 }
 
 :root[main-theme="dark"] {
     --bg: #1e1e1e;
     --text: #f0f0f0;
+    --accent-color: hsl(215, 44%, 80%, 0.4);
+    --secondary-color: hsla(284, 43%, 80%, 0.4);
 }
 
 body {
     background: var(--bg);
     color: var(--text);
+    transition: all 0.3s ease;
 }

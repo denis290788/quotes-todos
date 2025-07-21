@@ -1,5 +1,11 @@
 @import "./Card.css";
 
+.card-todo {
+    min-height: 100px;
+    background: var(--secondary-color);
+    justify-content: space-evenly;
+}
+
 .status {
     font-weight: bold;
 }

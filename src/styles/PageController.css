@@ -1,0 +1,6 @@
+.page-controller {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    align-self: center;
+}

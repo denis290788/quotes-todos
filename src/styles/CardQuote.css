@@ -1,5 +1,16 @@
 @import "./Card.css";
 
+.card-quote {
+    min-height: 130px;
+    background: var(--accent-color);
+    justify-content: space-between;
+}
+
 .quote {
     font-style: italic;
+}
+
+.author {
+    font-weight: bold;
+    align-self: flex-end;
 }

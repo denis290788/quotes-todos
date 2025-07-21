@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { fetchCards, PAGE_LIMIT } from "../services/api";
 import "../components/CardQuote";
 import "../components/CardTodo";
+import PageController from "./PageController";
+import "../styles/CardList.css";
 
 export default function CardList({ source }) {
     const [page, setPage] = useState(1);
@@ -41,9 +43,9 @@ export default function CardList({ source }) {
             {cardState.error && <p>{cardState.error}</p>}
 
             {!cardState.loading && !cardState.error && (
-                <>
-                    <p>Total: {cardState.total}</p>
-                    <div>
+                <div className="card-list-container">
+                    <p>Всего: {cardState.total}</p>
+                    <div className="card-list">
                         {cardState.cards.map((item, idx) =>
                             source === "quotes" ? (
                                 <card-quote key={idx} data={JSON.stringify(item)} />
@@ -52,19 +54,13 @@ export default function CardList({ source }) {
                             )
                         )}
                     </div>
-                    <div>
-                        <button
-                            onClick={() => setPage((p) => Math.max(p - 1, 1))}
-                            disabled={page === 1}
-                        >
-                            Назад
-                        </button>
-                        <span>Страница {page}</span>
-                        <button onClick={() => setPage((p) => p + 1)} disabled={isLastPage}>
-                            Вперёд
-                        </button>
-                    </div>
-                </>
+                    <PageController
+                        page={page}
+                        isLastPage={isLastPage}
+                        onPrev={() => setPage((p) => Math.max(p - 1, 1))}
+                        onNext={() => setPage((p) => p + 1)}
+                    />
+                </div>
             )}
         </div>
     );

@@ -1,5 +1,12 @@
 .card {
-    padding: 1rem;
-    border: 1px solid black;
+    padding: 16px;
+    color: var(--text);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card p {
+    margin: 0;
 }

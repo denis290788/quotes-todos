@@ -10,7 +10,7 @@ class CardQuote extends HTMLElement {
         const { quote, author } = JSON.parse(this.getAttribute("data") || "{}");
         this.shadowRoot.innerHTML = `
           <style>${quoteStyles}</style>
-          <div class="card">
+          <div class="card card-quote">
             <p class="quote">"${quote}"</p>
             <p class="author">${author}</p>
           </div>

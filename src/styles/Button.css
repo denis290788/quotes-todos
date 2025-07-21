@@ -1,0 +1,32 @@
+.button {
+    background-color: #b4c7e2;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+    min-width: 65px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.button:hover {
+    border-color: #007bff;
+    background-color: #a6bdd9;
+}
+
+.button:focus {
+    border-color: #007bff;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #d3dde9;
+}
